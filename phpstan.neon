@@ -1,0 +1,18 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    tmpDir: build/phpstan
+    level: 5
+    scanFiles:
+        - stub/extension.stub.php
+        - stub/frankenphp.stub.php
+    parallel:
+        maximumNumberOfProcesses: 0
+    paths:
+        - src
+    excludePaths:
+        - vendor
+    treatPhpDocTypesAsCertain: false
+    # Report unused private properties and methods
+    reportUnmatchedIgnoredErrors: false

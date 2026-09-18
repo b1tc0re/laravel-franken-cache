@@ -1,0 +1,11 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 8
+    scanFiles:
+        - stub/extension.stub.php
+        - stub/frankenphp.stub.php
+    paths:
+        - src
+        - tests

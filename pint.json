@@ -1,0 +1,49 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "declare_strict_types": true,
+        "attribute_empty_parentheses": false,
+        "blank_line_before_statement": {
+            "statements": [
+                "case",
+                "continue",
+                "declare",
+                "default",
+                "do",
+                "exit",
+                "for",
+                "foreach",
+                "goto",
+                "return",
+                "switch",
+                "throw",
+                "try",
+                "while",
+                "yield",
+                "yield_from"
+            ]
+        },
+        "align_multiline_comment": {
+            "comment_type": "phpdocs_only"
+        },
+        "trailing_comma_in_multiline": {
+            "after_heredoc": true,
+            "elements": [
+                "arguments",
+                "array_destructuring",
+                "arrays",
+                "match",
+                "parameters"
+            ]
+        },
+      "binary_operator_spaces": {
+        "default": "single_space",
+        "operators": {
+          "=" : "align_single_space_minimal",
+          "=>": "align_single_space_minimal",
+          "||": "align_single_space_minimal",
+          ".=": "align_single_space_minimal"
+        }
+      }
+    }
+}
