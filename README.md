@@ -1,4 +1,9 @@
 # Laravel Franken Cache
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Test Status](https://github.com/b1tc0re/laravel-franken-cache/actions/workflows/tests.yml/badge.svg)](https://github.com/b1tc0re/laravel-franken-cache/actions/workflows/tests.yml)
+[![Code Style Status](https://github.com/b1tc0re/laravel-franken-cache/actions/workflows/pint.yml/badge.svg)](https://github.com/b1tc0re/laravel-franken-cache/actions/workflows/pint.yml)
+[![PHPStan](https://github.com/b1tc0re/laravel-franken-cache/actions/workflows/phpstan.yml/badge.svg)](https://github.com/b1tc0re/laravel-franken-cache/actions/workflows/phpstan.yml)
+
 
 Laravel cache store adapter for the [FrankenPHP Tiered Cache](https://github.com/b1tc0re/frankenphp-tiered-cache) API.
 
@@ -119,6 +124,8 @@ composer test
 Run all local quality checks and tests with:
 
 ```bash
+composer global require --no-interaction --no-progress sebastian/phpcpd:6.0.3
+export PATH="$(composer global config bin-dir --absolute):$PATH"
 composer ci
 ```
 
