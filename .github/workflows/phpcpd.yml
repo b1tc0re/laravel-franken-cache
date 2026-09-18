@@ -24,8 +24,15 @@ jobs:
           extensions: dom, mbstring, xml, xmlwriter
           coverage: none
 
-      - name: Install dependencies
+      - name: Install project dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Install PHPCPD
+        env:
+          COMPOSER_HOME: ${{ runner.temp }}/composer-phpcpd
+        run: |
+          composer global require --no-interaction --no-progress sebastian/phpcpd:6.0.3
+          echo "$(composer global config bin-dir --absolute)" >> "$GITHUB_PATH"
 
       - name: Run PHPCPD
         run: composer deduplicate:check

@@ -119,6 +119,8 @@ composer test
 Run all local quality checks and tests with:
 
 ```bash
+composer global require --no-interaction --no-progress sebastian/phpcpd:6.0.3
+export PATH="$(composer global config bin-dir --absolute):$PATH"
 composer ci
 ```
 
